@@ -30,7 +30,7 @@ public class BetSpace : MonoBehaviour {
     public MeshRenderer[] betSpaceRender;
 
     private MeshRenderer mesh;
-    private float lastBet = 0;
+    private int lastBet = 0;
 
     public static bool BetsEnabled { get; private set; } = true;
 
@@ -92,12 +92,12 @@ public class BetSpace : MonoBehaviour {
 
     private void OnMouseUp()
     {
-        float selectedValue = ChipManager.GetSelectedValue();
+        int selectedValue = ChipManager.GetSelectedValue();
         ApplyBet(selectedValue);
         ToolTipManager.SelectTarget(stack);
     }
 
-    public void ApplyBet(float selectedValue)
+    public void ApplyBet(int selectedValue)
     {
         if (!LimitBetPlate.AllowLimit(selectedValue))
             return;
@@ -123,7 +123,7 @@ public class BetSpace : MonoBehaviour {
         }
     }
 
-    public void RemoveBet(float value)
+    public void RemoveBet(int value)
     {
         BalanceManager.ChangeBalance(value);
         ResultManager.totalBet -= value;
@@ -132,7 +132,7 @@ public class BetSpace : MonoBehaviour {
         SceneRoulette.UpdateLocalPlayerText();
     }
 
-    public float ResolveBet(int result)
+    public int ResolveBet(int result)
     {
         int multiplier = numLenght / winningNumbers.Length;
 
@@ -150,7 +150,7 @@ public class BetSpace : MonoBehaviour {
             }
         }
 
-        float winAmount = 0;
+        int winAmount = 0;
 
         if (won)
         {
@@ -195,7 +195,7 @@ public class BetSpace : MonoBehaviour {
     
     public void Clear()
     {
-        float val = stack.GetValue();
+        int val = stack.GetValue();
         BalanceManager.ChangeBalance(val);
         ResultManager.totalBet -= val;
         lastBet = 0;

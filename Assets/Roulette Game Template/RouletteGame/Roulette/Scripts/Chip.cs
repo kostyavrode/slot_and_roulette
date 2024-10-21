@@ -4,7 +4,7 @@ using DG.Tweening;
 
 public class Chip : MonoBehaviour {
     
-    public float value;
+    public int value;
     
     public GameObject ring;
 

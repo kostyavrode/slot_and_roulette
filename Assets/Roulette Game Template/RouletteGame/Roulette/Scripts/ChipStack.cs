@@ -9,7 +9,7 @@ public class ChipStack : MonoBehaviour {
     public static readonly Vector3 CollectPosition = new Vector3(0,0,-3);
 
     private Vector3 initialPosition;
-    private float value = 0;
+    private int value = 0;
 
     private List<GameObject> chips;
    
@@ -24,12 +24,12 @@ public class ChipStack : MonoBehaviour {
         initialPosition = pos;
     }
 
-    public void Add(float value)
+    public void Add(int value)
     {
         SetValue(this.value + value);
     }
 
-    public void Remove(float value)
+    public void Remove(int value)
     {
         SetValue(this.value - value);
     }
@@ -51,12 +51,12 @@ public class ChipStack : MonoBehaviour {
         return lastBet;
     }
 
-    public float GetValue()
+    public int GetValue()
     {
         return value;
     }
 
-    public void SetValue(float value)
+    public void SetValue(int value)
     {
         Clear();
 
@@ -72,7 +72,7 @@ public class ChipStack : MonoBehaviour {
 
         while (value > 0)
         {
-            float nextValue = value - CHIP_VALUES[currentChipIndex];
+            int nextValue = value - CHIP_VALUES[currentChipIndex];
 
             if (nextValue < 0)
             {
@@ -94,9 +94,9 @@ public class ChipStack : MonoBehaviour {
         }
     }
 
-    public float Win(int multiplier)
+    public int Win(int multiplier)
     {
-        float winAmount = value * multiplier;
+        int winAmount = value * multiplier;
         SetValue(winAmount);
 
         if (winAmount > 0)

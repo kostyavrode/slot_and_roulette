@@ -17,7 +17,7 @@ public class ResultManager : MonoBehaviour {
 
     public static void SetResult(int result)
     {
-        float totalWin = 0;
+        int totalWin = 0;
         
         foreach (BetSpace betSpace in Instance.betSpaces)
         {

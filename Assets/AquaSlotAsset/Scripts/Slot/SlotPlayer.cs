@@ -107,7 +107,14 @@ namespace Mkey
                 {
                     string key = saveCoinsKey;
                     if (PlayerPrefs.HasKey(key))
+                    {
                         coins = PlayerPrefs.GetInt(key);
+                        if (coins<=0)
+                        {
+                            coins = 100;
+                            PlayerPrefs.SetInt(key, coins);
+                        }
+                    }
                     else
                     {
                         PlayerPrefs.SetInt(key, defCoinsCount);

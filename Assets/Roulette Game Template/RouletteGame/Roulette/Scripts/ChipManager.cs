@@ -19,7 +19,7 @@ public class ChipManager : MonoBehaviour {
         return Instantiate(Instance.Chips[index]);
     }
 
-    public static float GetSelectedValue()
+    public static int GetSelectedValue()
     {
         if(selected != null)
             return selected.value;

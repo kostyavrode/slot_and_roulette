@@ -7,7 +7,7 @@ namespace Mkey
 {
     public class SoundMasterController : MonoBehaviour
     {
-
+        public static SoundMasterController instance;
         [Space(8, order = 0)]
         [Header("Default Sound Settings", order = 1)]
         private bool soundOn = true;
@@ -90,6 +90,7 @@ namespace Mkey
 
         void Awake()
         {
+            
 
             if (Instance == null)
             {
@@ -102,6 +103,22 @@ namespace Mkey
             }
             wff = new WaitForEndOfFrame();
             wfs0_1 = new WaitForSeconds(0.1f);
+
+
+        }
+        private void OnEnable()
+        {
+            instance = this;
+            //LobbyController.onSceneChanged += DisableVolumeWhenWrongScene;
+        }
+        private void OnDisable()
+        {
+            //LobbyController.onSceneChanged -= DisableVolumeWhenWrongScene;
+            instance = null;
+        }
+        private void OnDestroy()
+        {
+            //instance = null;
         }
 
         void Start()
@@ -324,7 +341,28 @@ namespace Mkey
         }
 
         #endregion play sounds
-
+        public void DisableVolumeWhenWrongScene(int sceneType)
+        {
+            switch(sceneType)
+            {
+                case 3:
+                    aSbkg.volume = 0;
+                    aSclick.volume = 0;
+                    aSloop.volume = 0;
+                    break;
+                case 4:
+                    aSbkg.volume = 0;
+                    aSclick.volume = 0;
+                    aSloop.volume = 0;
+                    break;
+                default:
+                    Debug.Log("Sound default");
+                    aSbkg.volume = 0.45f;
+                    aSclick.volume = 1;
+                    aSloop.volume = 1;
+                    break;
+            }
+        }
         private void ApplyVolume()
         {
             if (aSclick)

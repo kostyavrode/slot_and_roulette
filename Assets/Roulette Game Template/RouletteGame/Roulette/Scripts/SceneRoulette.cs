@@ -44,7 +44,7 @@ public class SceneRoulette : MonoBehaviour
 
     private void Start()
     {
-        BalanceManager.SetBalance(1000);
+        BalanceManager.SetBalance();
     }
 
     public void MessageQuitResult(int value)

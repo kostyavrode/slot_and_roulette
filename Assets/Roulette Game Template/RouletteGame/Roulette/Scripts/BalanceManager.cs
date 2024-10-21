@@ -1,22 +1,28 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BalanceManager : MonoBehaviour {
 
-    public static float Balance { get; private set; } = 0;
+    public static int Balance { get; private set; } = 0;
 
-    public static void SetBalance(float balance)
+    public static void SetBalance()
     {
-        Balance = balance;
+        Balance = PlayerPrefs.GetInt("mk_slot_coins");
+        Debug.Log("Balance: " + Balance);
         SceneRoulette.UpdateLocalPlayerText();
     }
 
-    public static void ChangeBalance(float value)
+    public static void ChangeBalance(int value)
     {
         Balance += value;
         SceneRoulette.UpdateLocalPlayerText();
+        string key = "mk_slot_coins";
+        int t=(int)value;
+        PlayerPrefs.SetInt(key, t);
+        PlayerPrefs.Save();
     }
 
-    public void ResetBalance(float balance)
+    public void ResetBalance(int balance)
     {
         Balance = balance;
         SceneRoulette.UpdateLocalPlayerText();

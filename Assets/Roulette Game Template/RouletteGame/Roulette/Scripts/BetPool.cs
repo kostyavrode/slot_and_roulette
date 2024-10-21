@@ -30,7 +30,7 @@ public class BetPool : MonoBehaviour
         _BetsList.Clear();
     }
     
-    public void Add(BetSpace space, float value)
+    public void Add(BetSpace space, int value)
     {
         _BetFootprints.Push(new BetFootprint(space, value));
 
@@ -89,9 +89,9 @@ public class BetPool : MonoBehaviour
 public class BetFootprint
 {
     public BetSpace betSpace;
-    public float value;
+    public int value;
 
-    public BetFootprint(BetSpace betSpace, float value)
+    public BetFootprint(BetSpace betSpace, int value)
     {
         this.betSpace = betSpace;
         this.value = value;
