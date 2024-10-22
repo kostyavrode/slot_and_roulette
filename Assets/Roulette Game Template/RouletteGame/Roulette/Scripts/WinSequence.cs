@@ -24,7 +24,7 @@ public class WinSequence : MonoBehaviour {
         {
             winPanel.SetActive(true);
             winText.text = string.Format("<color=#yellow>WIN</color> {0}", totalWin.ToString("F2"));
-            AudioManager.SoundPlay(0);
+            AudioMaManager.SoundPlay(0);
         }
 
         string sRes;

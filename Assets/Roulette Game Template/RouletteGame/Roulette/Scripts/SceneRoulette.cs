@@ -57,7 +57,7 @@ public class SceneRoulette : MonoBehaviour
     
     public void OnButtonClear()
     {
-        AudioManager.SoundPlay(3);
+        AudioMaManager.SoundPlay(3);
         clearButton.interactable = false;
         rollButton.interactable = false;
         pool.Clear();
@@ -66,7 +66,7 @@ public class SceneRoulette : MonoBehaviour
     public void OnButtonUndo()
     {
         undoButton.interactable = false;
-        AudioManager.SoundPlay(3);
+        AudioMaManager.SoundPlay(3);
         pool.Undo();
     }
 
@@ -93,7 +93,7 @@ public class SceneRoulette : MonoBehaviour
             _AmeWheel.Spin();
 
         ChangeUI();
-        AudioManager.SoundPlay(2);
+        AudioMaManager.SoundPlay(2);
     }
 
     public void ChangeUI()

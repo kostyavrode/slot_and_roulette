@@ -61,7 +61,7 @@ public class BallManager : MonoBehaviour {
         ball.transform.SetParent(resultPoint);
         Vector3 direction = (Target.position - resultPoint.position);
         bouncing = true;
-        AudioManager.StopAuxiliar();
+        AudioMaManager.StopAuxiliar();
         StartCoroutine(BounceSound());
         ball.transform.DOLocalJump(Vector3.zero, .04f, 5, ballTimeSpeed).SetEase(Ease.Linear).OnComplete(() => { bouncing = false; });
     }
@@ -71,7 +71,7 @@ public class BallManager : MonoBehaviour {
         while (bouncing)
         {
             yield return new WaitForSeconds(.3f);
-            AudioManager.SoundPlay(1);
+            AudioMaManager.SoundPlay(1);
         }
     }
 

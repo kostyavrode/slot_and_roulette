@@ -22,7 +22,7 @@ public class Chip : MonoBehaviour {
         transform.DOComplete();
         if (ChipManager.selected)
         {
-            AudioManager.SoundPlay(3);
+            AudioMaManager.SoundPlay(3);
             ChipManager.selected.transform.DOScale(1f, .2f);
             ChipManager.selected.ring.SetActive(false);
         }

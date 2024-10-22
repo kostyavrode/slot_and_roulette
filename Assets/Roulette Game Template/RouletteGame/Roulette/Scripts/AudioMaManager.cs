@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class AudioManager : MonoBehaviour
+public class AudioMaManager : MonoBehaviour
 {
-    public static AudioManager _Instance;
+    public static AudioMaManager _Instance;
 
     public int maxAudioSourcePool = 15;
     public AudioEvent[] audioEvent;

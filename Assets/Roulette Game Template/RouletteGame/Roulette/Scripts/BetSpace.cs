@@ -104,7 +104,7 @@ public class BetSpace : MonoBehaviour {
 
         if (BetsEnabled && selectedValue > 0 && BalanceManager.Balance - selectedValue >= 0)
         {
-            AudioManager.SoundPlay(3);
+            AudioMaManager.SoundPlay(3);
             print("Bet applyed! with: " + selectedValue );
 
             BalanceManager.ChangeBalance(-selectedValue);

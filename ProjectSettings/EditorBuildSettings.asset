@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Roulette Game Template/RouletteGame/Roulette/Scenes/EuropeanRoulette_mobile.unity
     guid: b24f0918bb57e5d41bafabfcce6ee895
+  - enabled: 1
+    path: Assets/Blackjack/Scenes/Game.unity
+    guid: 1591dca695b534ef5ac3dd3c8c31f913
   m_configObjects: {}

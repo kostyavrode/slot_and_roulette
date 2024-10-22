@@ -71,7 +71,7 @@ public class BetPool : MonoBehaviour
     public IEnumerator Rebet()
     {
         ResultManager.totalBet = 0;
-        AudioManager.SoundPlay(3);
+        AudioMaManager.SoundPlay(3);
 
         foreach (BetSpace bet in _RebetList)
         {
