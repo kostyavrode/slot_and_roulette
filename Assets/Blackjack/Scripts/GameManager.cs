@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Money not Enough");
         }
         betController.ShowMoney();
-
+        betController.SetButtonsState(false);
         EvaluateHands(GameState.HumanTurn);
     }
 
@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour
         else if (CurrentState == GameState.ComputerWon) {
             _computer.Score++;
         }
-
+        betController.SetButtonsState(true);
         CurrentAction = GameAction.NewGame;
 
         _uiManager.UpdateScore(_human.Score, _computer.Score);

@@ -2291,6 +2291,8 @@ MonoBehaviour:
   currentBidText: {fileID: 1875127853}
   balance: {fileID: 268668421}
   gameManager: {fileID: 2013519727}
+  increaseButton: {fileID: 707790428}
+  decreaseButton: {fileID: 1248205368}
 --- !u!1 &1592392740
 GameObject:
   m_ObjectHideFlags: 0
