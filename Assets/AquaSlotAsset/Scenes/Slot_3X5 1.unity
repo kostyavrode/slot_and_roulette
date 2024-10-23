@@ -3138,25 +3138,25 @@ MonoBehaviour:
     freeSpins: 10
   useLineBetMultiplier: 1
   slotIcons:
-  - iconSprite: {fileID: 21300000, guid: 7c51032cefef99644ac522d095c724a4, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 6828d9dd4aac2614fbaf37fa8816014a, type: 3}
     addIconSprite: {fileID: 21300000, guid: e0f062db75880634eb1a12b8806f7321, type: 3}
-  - iconSprite: {fileID: 21300000, guid: ed2d1ab3b1512e24fb6ca424cc992a31, type: 3}
+  - iconSprite: {fileID: 21300000, guid: a9cfebdb438eb874aa4db24f23e5aa98, type: 3}
     addIconSprite: {fileID: 21300000, guid: e0f062db75880634eb1a12b8806f7321, type: 3}
-  - iconSprite: {fileID: 21300000, guid: e2cdab824b9a87d40b8f164de95cdc1a, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 8b59212b3a97d824e8c9036870617fc9, type: 3}
     addIconSprite: {fileID: 21300000, guid: e0f062db75880634eb1a12b8806f7321, type: 3}
-  - iconSprite: {fileID: 21300000, guid: 32e3e779871405542a640c52a6bd1a59, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 079068ec362704d4dabe8680e794111d, type: 3}
     addIconSprite: {fileID: 21300000, guid: e0f062db75880634eb1a12b8806f7321, type: 3}
-  - iconSprite: {fileID: 21300000, guid: 3bf479c148689cf46a69ca2979df6edd, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 9415a77fa0e78124d97eb32ba012bebb, type: 3}
     addIconSprite: {fileID: 21300000, guid: e0f062db75880634eb1a12b8806f7321, type: 3}
-  - iconSprite: {fileID: 21300000, guid: f0811bee0129f474c8da3961fb8ee5ce, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 8faeda3ae8ffc2c4385e1a93d959322c, type: 3}
     addIconSprite: {fileID: 21300000, guid: 4171751f855bcbf4489c0aa5706885ea, type: 3}
-  - iconSprite: {fileID: 21300000, guid: 197156ee41de304448ac234e4af60afa, type: 3}
+  - iconSprite: {fileID: 21300000, guid: b1139376c5d51f8469206d3df3c65589, type: 3}
     addIconSprite: {fileID: 21300000, guid: 4171751f855bcbf4489c0aa5706885ea, type: 3}
-  - iconSprite: {fileID: 21300000, guid: 938f1b97b537e234a98c002ea12f8a12, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 5c397f2e230364e4ea6066360631078b, type: 3}
     addIconSprite: {fileID: 21300000, guid: 4171751f855bcbf4489c0aa5706885ea, type: 3}
-  - iconSprite: {fileID: 21300000, guid: aebf904a27892b74cb2f6473fa47db4c, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 3db062bd856b0364eb3e85aeb90cdd14, type: 3}
     addIconSprite: {fileID: 21300000, guid: 4171751f855bcbf4489c0aa5706885ea, type: 3}
-  - iconSprite: {fileID: 21300000, guid: 006bd5caf4cd2d84db30deed10a0b27f, type: 3}
+  - iconSprite: {fileID: 21300000, guid: 9b92f166d5d6e55439877e8308f76b56, type: 3}
     addIconSprite: {fileID: 21300000, guid: 4171751f855bcbf4489c0aa5706885ea, type: 3}
   - iconSprite: {fileID: 21300000, guid: 4aebfb346d57c5d4092eacc87b828fe0, type: 3}
     addIconSprite: {fileID: 21300000, guid: 4171751f855bcbf4489c0aa5706885ea, type: 3}
