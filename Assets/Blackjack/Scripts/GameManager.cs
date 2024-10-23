@@ -8,7 +8,9 @@ public class GameManager : MonoBehaviour
     private GameAction _currentAction;
     private Coroutine _computerTurnCoroutine;
 
-    public int betSize=10;
+    public int betSize;
+
+    public BetController betController;
 
     [SerializeField]
     private AudioManager _audioManager;
@@ -100,6 +102,18 @@ public class GameManager : MonoBehaviour
         _dealer.Deal(_human);
         _dealer.Deal(_computer, false);
 
+        if (PlayerPrefs.GetInt("mk_slot_coins") >= betSize)
+        {
+            PlayerPrefs.SetInt("mk_slot_coins", PlayerPrefs.GetInt("mk_slot_coins") - betSize);
+            PlayerPrefs.Save();
+
+        }
+        else
+        {
+            Debug.Log("Money not Enough");
+        }
+        betController.ShowMoney();
+
         EvaluateHands(GameState.HumanTurn);
     }
 
@@ -123,15 +137,6 @@ public class GameManager : MonoBehaviour
 
         CurrentState = GameState.None;
         CurrentAction = GameAction.Deal;
-        if (PlayerPrefs.GetInt("mk_slot_coins")>=betSize)
-        {
-            PlayerPrefs.SetInt("mk_slot_coins", PlayerPrefs.GetInt("mk_slot_coins")-betSize);
-            PlayerPrefs.Save();
-        }
-        else
-        {
-            Debug.Log("Money not Enough");
-        }
     }
 
 
@@ -227,10 +232,12 @@ public class GameManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("mk_slot_coins", PlayerPrefs.GetInt("mk_slot_coins") + betSize * 2);
         PlayerPrefs.Save();
+        betController.ShowMoney();
         Debug.Log("Win");
     }
     private void PlayerLose()
     {
         Debug.Log("Lose");
+        betController.ShowMoney();
     }
 }

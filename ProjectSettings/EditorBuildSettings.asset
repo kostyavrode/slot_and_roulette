@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Blackjack/Scenes/Game.unity
     guid: 1591dca695b534ef5ac3dd3c8c31f913
+  - enabled: 1
+    path: Assets/AquaSlotAsset/Scenes/Slot_3X5 1.unity
+    guid: d434c1acef2158b4ca1486270b26d59b
+  - enabled: 1
+    path: Assets/AquaSlotAsset/Scenes/Slot_3X5 2.unity
+    guid: 1201d48be32c1e242a6333ea3345ad80
   m_configObjects: {}
