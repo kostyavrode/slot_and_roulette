@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class CustomSceneLoader : MonoBehaviour
 {
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
     public void LoadSweetSlotsScene()
     {
         SceneManager.LoadScene(6);
