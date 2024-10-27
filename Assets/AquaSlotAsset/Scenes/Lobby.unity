@@ -3164,7 +3164,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1165281588}
         m_TargetAssemblyTypeName: CustomSceneLoader, Assembly-CSharp
-        m_MethodName: LoadSweetSlotsScene
+        m_MethodName: LoadBookSlotsScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3877,7 +3877,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1165281588}
         m_TargetAssemblyTypeName: CustomSceneLoader, Assembly-CSharp
-        m_MethodName: LoadBookSlotsScene
+        m_MethodName: LoadSweetSlotsScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
