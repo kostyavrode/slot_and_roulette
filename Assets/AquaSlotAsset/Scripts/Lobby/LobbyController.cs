@@ -30,6 +30,11 @@ namespace Mkey {
         {
             GuiController.Instance.ShowShop();
         }
+        public void ExitApp()
+        {
+            Application.Quit();
+        }
 
     }
+
 }
